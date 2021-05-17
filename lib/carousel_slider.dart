@@ -213,7 +213,7 @@ class CarouselSliderState extends State<CarouselSlider>
         onNotification: (notification) {
           if (widget.options.onScrolled != null &&
               notification is ScrollUpdateNotification) {
-            widget.options.onScrolled(carouselState.pageController!.page!);
+            widget.options.onScrolled!(carouselState.pageController!.page!);
           }
           return false;
         },
@@ -279,7 +279,7 @@ class CarouselSliderState extends State<CarouselSlider>
         int currentPage = getRealIndex(index + carouselState.initialPage,
             carouselState.realPage, widget.itemCount);
         if (widget.options.onPageChanged != null) {
-          widget.options.onPageChanged(currentPage, mode);
+          widget.options.onPageChanged!(currentPage, mode);
         }
       },
       itemBuilder: (BuildContext context, int idx) {
