@@ -116,7 +116,7 @@ class CarouselOptions {
   final bool disableCenter;
 
   CarouselOptions({
-    this.height,
+    required this.height,
     this.aspectRatio: 16 / 9,
     this.viewportFraction: 0.8,
     this.initialPage: 0,
@@ -127,15 +127,15 @@ class CarouselOptions {
     this.autoPlayAnimationDuration = const Duration(milliseconds: 800),
     this.autoPlayCurve: Curves.fastOutSlowIn,
     this.enlargeCenterPage = false,
-    this.onPageChanged,
-    this.onScrolled,
-    this.scrollPhysics,
+    required this.onPageChanged,
+    required this.onScrolled,
+    required this.scrollPhysics,
     this.pageSnapping = true,
     this.scrollDirection: Axis.horizontal,
     this.pauseAutoPlayOnTouch: true,
     this.pauseAutoPlayOnManualNavigate: true,
     this.pauseAutoPlayInFiniteScroll: false,
-    this.pageViewKey,
+    required this.pageViewKey,
     this.enlargeStrategy: CenterPageEnlargeStrategy.scale,
     this.disableCenter: false,
   });
